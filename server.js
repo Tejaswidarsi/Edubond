@@ -6,17 +6,17 @@ const dotenv = require('dotenv');
 // Verify .env file exists
 const envPath = path.resolve(__dirname, '.env');
 if (!fs.existsSync(envPath)) {
-  console.error(`❌ .env file not found at: ${envPath}`);
+  console.error(`.env file not found at: ${envPath}`);
 } else {
-  console.log(`✅ .env file found at: ${envPath}`);
+  console.log(`.env file found at: ${envPath}`);
 }
 
 // Load .env file
 const dotenvResult = dotenv.config({ path: envPath });
 if (dotenvResult.error) {
-  console.error('❌ Error loading .env file:', dotenvResult.error.message);
+  console.error('Error loading .env file:', dotenvResult.error.message);
 } else {
-  console.log('✅ .env file loaded successfully');
+  console.log('.env file loaded successfully');
 }
 
 console.log('DEBUG: RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID || 'undefined');
@@ -43,12 +43,12 @@ try {
       key_id: process.env.RAZORPAY_KEY_ID,
       key_secret: process.env.RAZORPAY_KEY_SECRET,
     });
-    console.log('✅ Razorpay initialized successfully');
+    console.log('Razorpay initialized successfully');
   } else {
-    console.warn('⚠️ Razorpay keys missing. Razorpay routes will be disabled.');
+    console.warn('Razorpay keys missing. Razorpay routes will be disabled.');
   }
 } catch (err) {
-  console.error('❌ Error initializing Razorpay:', err.message);
+  console.error(' Error initializing Razorpay:', err.message);
 }
 
 // Middleware
@@ -75,7 +75,8 @@ const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log('✅ MongoDB connected');
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    console.log('MongoDB connected');
+    app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
   })
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+
+  .catch((err) => console.error(' MongoDB connection error:', err));
