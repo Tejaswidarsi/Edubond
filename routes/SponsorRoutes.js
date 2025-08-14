@@ -8,11 +8,11 @@ const router = express.Router();
 
 // Verify Razorpay keys
 if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
-  console.error('❌ Razorpay key_id or key_secret is missing in environment variables');
+  console.error('Razorpay key_id or key_secret is missing in environment variables');
   throw new Error('Razorpay key_id or key_secret is missing');
 }
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID, // e.g., rzp_test_3
+  key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
@@ -138,3 +138,4 @@ router.post('/payment-success', async (req, res) => {
 });
 
 module.exports = router;
+
