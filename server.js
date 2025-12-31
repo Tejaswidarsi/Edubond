@@ -1,8 +1,6 @@
-// server.js (ES Module version)
+// server.js (ES Module version without .env)
 
 import path from 'path';
-import fs from 'fs';
-import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import Razorpay from 'razorpay';
@@ -14,28 +12,6 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// 🔐 Load .env file
-const envPath = path.resolve(__dirname, '.env');
-
-if (!fs.existsSync(envPath)) {
-  console.error(`.env file not found at: ${envPath}`);
-} else {
-  console.log(`.env file found at: ${envPath}`);
-}
-
-const dotenvResult = dotenv.config({ path: envPath });
-if (dotenvResult.error) {
-  console.error('Error loading .env file:', dotenvResult.error.message);
-} else {
-  console.log('.env file loaded successfully');
-}
-
-// Debug logs (safe for testing, remove later)
-console.log('DEBUG: RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID || 'undefined');
-console.log('DEBUG: RAZORPAY_KEY_SECRET:', process.env.RAZORPAY_KEY_SECRET || 'undefined');
-console.log('DEBUG: MONGO_URI:', process.env.MONGO_URI ? 'loaded' : 'undefined');
-console.log('DEBUG: PORT:', process.env.PORT || 'undefined');
 
 // Routes (ESM import)
 import studentRoutes from './routes/studentRoutes.js';
