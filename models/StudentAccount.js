@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const studentAccountSchema = new mongoose.Schema({
   name: {
@@ -23,4 +23,5 @@ const studentAccountSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
-module.exports = mongoose.models.StudentAccount || mongoose.model('StudentAccount', studentAccountSchema);
+const StudentAccount = mongoose.models.StudentAccount || mongoose.model('StudentAccount', studentAccountSchema);
+export default StudentAccount;
