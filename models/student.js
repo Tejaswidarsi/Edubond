@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { v4: uuidv4 } = require('uuid');
+import mongoose from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 
 const studentSchema = new mongoose.Schema({
   requestId: { type: String, default: uuidv4 },
@@ -11,47 +11,30 @@ const studentSchema = new mongoose.Schema({
     required: true
   },
   requiredAmount: {
-  type: Number,
-  required: true,
-  min: 1, // optional: set a minimum amount
-},
-  currentClassOrProgram: {
-    type: String,
-    required: true
+    type: Number,
+    required: true,
+    min: 1,
   },
-  institutionName: {
-    type: String,
-    required: true
-  },
+  currentClassOrProgram: { type: String, required: true },
+  institutionName: { type: String, required: true },
   incomeProofUrl: String,
   photoUrl: String,
   videoUrl: String,
-  story: {
-    type: String,
-    maxlength: 3000
-  },
+  story: { type: String, maxlength: 3000 },
   accountHolderName: String,
   accountNumber: String,
   ifscCode: String,
   bankName: String,
   upiId: String,
-  status: {
-    type: String,
-    default: 'Pending'
-  },
+  status: { type: String, default: 'Pending' },
   statusProgress: {
     type: String,
     enum: ['Submitted', 'Under Review', 'Approved', 'Partially Funded', 'Completed', 'Rejected'],
     default: 'Submitted'
   },
-  received: {
-    type: Number,
-    default: 0
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
+  received: { type: Number, default: 0 },
+  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.models.Student || mongoose.model('Student', studentSchema);
+const Student = mongoose.models.Student || mongoose.model('Student', studentSchema);
+export default Student;
