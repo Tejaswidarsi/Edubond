@@ -24,10 +24,10 @@ const app = express();
 // 🔹 Initialize Razorpay (optional)
 let razorpay;
 try {
-  if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
+  if (RAZORPAY_KEY_ID && RAZORPAY_KEY_SECRET) {
     razorpay = new Razorpay({
-      key_id: process.env.RAZORPAY_KEY_ID,
-      key_secret: process.env.RAZORPAY_KEY_SECRET,
+      key_id: RAZORPAY_KEY_ID,
+      key_secret: RAZORPAY_KEY_SECRET,
     });
     console.log('Razorpay initialized successfully');
   } else {
@@ -58,10 +58,10 @@ app.post('/payment/process', (req, res) => {
 });
 
 // 🔗 MongoDB + Server start
-const PORT = process.env.PORT || 5000;
+const PORT = PORT || 5000;
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
     app.listen(PORT, () =>
@@ -71,3 +71,4 @@ mongoose
   .catch((err) => {
     console.error('MongoDB connection error:', err.message);
   });
+
