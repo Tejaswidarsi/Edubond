@@ -1,0 +1,139 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7fafc;
+}
+
+.track-status-container {
+  max-width: 64rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.track-status-header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: hsl(186, 82%, 65%);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.status-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.status-info {
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.status-info p {
+  margin: 0 0 0.5rem;
+}
+
+.status-info strong {
+  font-weight: 600;
+  color: #59b73f;
+}
+
+.status-info .student-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.status-timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status-step {
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.status-step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d2d6dc;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.status-step-circle.active {
+  background-color: #59b73f;
+}
+
+.status-step-label {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #2d3748;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #59b73f;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #4a9732;
+}
+
+.back-button i {
+  margin-right: 0.5rem;
+}
+
+.text-primary, .text-primary-hover:hover {
+  color: #ff712a !important;
+}
+
+.text-secondary, .text-secondary-hover:hover {
+  color: #59b73f !important;
+}
+
+.display-25 {
+  font-size: 1.4rem;
+}

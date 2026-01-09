@@ -1,0 +1,245 @@
+/*login*/
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Basic page container */
+.student-dashboard-container {
+    padding: 24px; /* p-6 */
+}
+
+/* Header section */
+
+
+.dashboard-title {
+    font-size: 2rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1a202c; /* A typical dark text color */
+    margin: 0;
+    
+}
+
+/* Finance Request Button */
+.dashboard-header {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21d6e3; /* Green header */
+  padding: 10px 20px;
+  border-radius: 4px 4px 0 0; /* Optional: for rounded top corners */
+  color: white;
+ 
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px; /* gap between the two buttons */
+}
+.finance-request-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.finance-request-button:hover {
+  background-color: #218838;
+}
+
+.logout-icon-button {
+  background-color: #fff;
+  border: 2px solid #dc3545;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.logout-icon-button:hover {
+  background-color: #f8d7da;
+  transform: scale(1.1);
+}
+
+
+/* Loading and No Requests Message */
+.message-container {
+    background-color: white;
+    padding: 24px; /* p-6 */
+    border-radius: 0.5rem; /* rounded */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+    text-align: center;
+}
+
+.message-text {
+    color: #4a5568; /* text-gray-600 */
+    margin-bottom: 16px; /* mb-4 */
+}
+
+/* Past Requests Section */
+.past-requests-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 16px; /* mb-4 */
+    color: #2d3748; /* text-gray-800 */
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* space-y-4 */
+}
+
+/* Individual Request Card */
+.request-card {
+    background-color: white;
+    padding: 16px; /* p-4 */
+    border-radius: 0.5rem; /* rounded */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+    transition: transform 0.2s ease-in-out; /* For hover effect */
+}
+
+.request-card:hover {
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Stronger shadow on hover */
+}
+
+
+.request-card-name {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    color: #2b6cb0; /* text-blue-700 */
+    margin-bottom: 8px; /* Some spacing */
+}
+
+.request-card p {
+    margin-bottom: 4px; /* Small spacing between lines */
+    color: #4a5568; /* Default text color for paragraphs */
+}
+
+.request-card p strong {
+    font-weight: 600; /* Slightly bolder for labels */
+}
+
+.request-card .status-progress {
+    color: #3182ce; /* text-blue-600 */
+    font-weight: 500;
+}
+.request-purpose-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.request-purpose-text {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.track-button
+{
+   background-color: #ce5831; /* text-blue-600 */
+  font-weight: 500; 
+  border: 1px transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 2px;
+}
+.login-button1 {
+  width: 100%;
+  padding: 12px;
+  background-color: #73ff00;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button1:hover {
+  background-color: #30b300;
+}
+.login-input1 {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.login-input1:focus {
+  border-color: #6ef780;
+  outline: none;
+}

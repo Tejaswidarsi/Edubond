@@ -1,0 +1,296 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.sponsor-dashboard {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.sponsor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.sponsor-header {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff5722;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.no-students-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  background-color: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.student-profile-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.student-profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .student-profile-content {
+    flex-direction: row;
+  }
+}
+
+.student-profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e0e0e0;
+  transition: border-color 0.3s ease;
+}
+
+.student-profile-card:hover .student-profile-image {
+  border-color: #ff5722;
+}
+
+.student-info-section {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.student-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.student-details {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.student-details p {
+  margin: 0 0 0.5rem;
+}
+
+.student-story {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.student-video-section {
+  margin-top: 1.5rem;
+}
+
+.student-video-section video {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 400px;
+}
+
+.funding-details {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+@media (min-width: 640px) {
+  .funding-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.funding-details strong {
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.funding-details .upi-id {
+  font-family: 'Courier New', Courier, monospace;
+  color: #2c3e50;
+  background: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.payment-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .payment-section {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.payment-input-field {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 250px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.payment-input-field:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.2);
+}
+
+.payment-submit-button {
+  background-color: #27ae60;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-submit-button:hover {
+  background-color: #219653;
+}
+
+.payment-submit-button i {
+  margin-right: 0.5rem;
+}
+
+.qr-code-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.verify-transaction-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verify-transaction-button:hover {
+  background-color: #218838;
+}
+
+.refund-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .refund-section {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.refund-input-field {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 250px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.refund-input-field:focus {
+  outline: none;
+  border-color: #ff4444;
+  box-shadow: 0 0 0 4px rgba(255, 68, 68, 0.2);
+}
+
+.refund-submit-button {
+  background-color: #ff4444;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refund-submit-button:hover {
+  background-color: #cc3333;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  color: #7f8c8d;
+}
+
+.footer a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.text-primary {
+  color: #ff5722 !important;
+}
+
+.text-secondary {
+  color: #27ae60 !important;
+}
+
+.display-25 {
+  font-size: 1.5rem;
+}
